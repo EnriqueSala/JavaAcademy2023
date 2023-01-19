@@ -1,4 +1,4 @@
-package abstractinterface;
+package com.bank;
 
 import java.math.BigDecimal;
 
@@ -7,13 +7,16 @@ public class Account {
 
 	
 	
-	
-	
-	//constructor,setter and getters
-	public Account(BigDecimal balance) {
+	//I made the constructor default so it can be accessed through the package (bank)
+	Account(BigDecimal balance) {
+		super();
 		this.balance = balance;
 	}
 
+	
+	
+	
+	//setter and getters
 	public BigDecimal getBalance() {
 		return balance;
 	}

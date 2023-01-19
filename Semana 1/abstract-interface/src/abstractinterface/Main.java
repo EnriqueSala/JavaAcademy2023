@@ -13,13 +13,13 @@ public class Main {
 			add(new BigDecimal(5000));
 			add(new BigDecimal(5100));
 			add(new BigDecimal(3000));
-			add(new BigDecimal(10000));
+			add(new BigDecimal(9000));
 			add(new BigDecimal(15000));
 			}
 		};
 		
 		
-		//I create one user with one account for each case and add it to the list
+		//I create a user and an account to test each case scenario
 		//RegularUsers
 		RegularUser regular1 = new RegularUser("John Smith","+1-234-567-890" , "johnsmith@gmail.com");
 		Account account1 = new Account(new BigDecimal(5000));
