@@ -59,7 +59,11 @@ public class Main {
 					abstractUsers.get(i).withdraw(0,amounts.get(i));
 				}
 				
+				//this prints the number of Bank instances I have
+				System.out.println(Bank.counter);
 				
+				
+				//this is to prove I can't create Accounts without using the bank instance
 				//Account account = new Account(new BigDecimal(5000));
 			}
 

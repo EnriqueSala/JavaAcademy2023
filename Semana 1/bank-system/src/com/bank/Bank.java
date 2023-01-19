@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class Bank {
 	//This is so I can prove there's only one Bank instance
-	static int counter;
+	public static int counter;
 	
 	String name;
 	private static Bank bank;
@@ -15,7 +15,7 @@ public class Bank {
 		counter++;
 	}
 	
-	
+	//if there's no instance I create a new one otherwise I return the existent one
 	public static Bank getBankInstance() {
 		if(bank==null)
 			bank=new Bank("BBVA");
