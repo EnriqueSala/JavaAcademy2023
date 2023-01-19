@@ -10,7 +10,7 @@ public class PremiumUser extends AbstractUser {
 
 	//Interface methods
 	@Override
-	public void whithdraw(int accountNumber, BigDecimal amount) {
+	public void withdraw(int accountNumber, BigDecimal amount) {
 		
 		//I get the account object I'm gonna be working with and it's balance
 		Account account = this.accounts.get(accountNumber);

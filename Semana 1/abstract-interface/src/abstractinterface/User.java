@@ -4,6 +4,6 @@ import java.math.BigDecimal;
 
 public interface User {
 	
-	public void whithdraw(int accountNumber, BigDecimal amount);
+	public void withdraw(int accountNumber, BigDecimal amount);
 	
 }

@@ -6,6 +6,7 @@ import java.util.List;
 
 public class Main {
 	public static void main(String[] args) {
+		//Create the list of users and create and fill a list of amounts for testing
 		List<User> abstractUsers = new ArrayList<>();
 		ArrayList<BigDecimal> amounts = new ArrayList<BigDecimal>() {
 			{
@@ -16,6 +17,8 @@ public class Main {
 			add(new BigDecimal(15000));
 			}
 		};
+		
+		
 		//I create one user with one account for each case and add it to the list
 		//RegularUsers
 		RegularUser regular1 = new RegularUser("John Smith","+1-234-567-890" , "johnsmith@gmail.com");
@@ -46,7 +49,9 @@ public class Main {
 		abstractUsers.add(premium2);
 		
 		for(int i=0; i<abstractUsers.size(); i++) {
-			abstractUsers.get(i).whithdraw(0,amounts.get(i));
+			//I use the withdraw method from the user interface
+			//the 0 means the first account of that user
+			abstractUsers.get(i).withdraw(0,amounts.get(i));
 		}
 	}
 }
