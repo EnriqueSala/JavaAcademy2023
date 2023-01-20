@@ -2,7 +2,9 @@ package abstractinterface;
 
 import java.util.ArrayList;
 
-//Abstract class to show the attributes all the users have
+//POLYMORPHISM
+
+//Abstract class with the attributes all users must have
 public abstract class AbstractUser implements User {
 	String name;
 	String phone;

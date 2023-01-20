@@ -8,6 +8,8 @@ public class Main {
 	public static void main(String[] args) {
 		//Create the list of users and create and fill a list of amounts for testing
 		List<User> abstractUsers = new ArrayList<>();
+		
+		//List with values to test the methods in a for loop
 		ArrayList<BigDecimal> amounts = new ArrayList<BigDecimal>() {
 			{
 			add(new BigDecimal(5000));
