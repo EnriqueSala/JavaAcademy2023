@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Update Student</title>
+	<title>Actualizar usuario</title>
 
 	<link type="text/css" rel="stylesheet" href="css/style.css">
 	<link type="text/css" rel="stylesheet" href="css/add-student-style.css">	
@@ -16,7 +16,7 @@
 	</div>
 	
 	<div id="container">
-		<h3>Actualizar estudiante</h3>
+		<h3>Actualizar usuario</h3>
 		
 		<form action="StudentControllerServlet" method="GET">
 		
@@ -39,14 +39,26 @@
 					</tr>
 
 					<tr>
-						<td><label>correo:</label></td>
+						<td><label>Correo:</label></td>
 						<td><input type="text" name="correo" 
 								   value="${THE_STUDENT.correo}" /></td>
 					</tr>
 					
 					<tr>
+						<td><label>Dirección:</label></td>
+						<td><input type="text" name="direccion" 
+								   value="${THE_STUDENT.direccion}" /></td>
+					</tr>
+					
+					<tr>
+						<td><label>Teléfono:</label></td>
+						<td><input type="text" name="telefono" 
+								   value="${THE_STUDENT.telefono}" /></td>
+					</tr>
+					
+					<tr>
 						<td><label></label></td>
-						<td><input type="submit" value="Save" class="save" /></td>
+						<td><input type="submit" value="Guardar" class="save" /></td>
 					</tr>
 					
 				</tbody>

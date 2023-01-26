@@ -32,14 +32,16 @@
 					<th>Nombre</th>
 					<th>Apellido</th>
 					<th>Correo</th>
+					<th>Dirección</th>
 				</tr>
 				
 				<% for (Student tempStudent : theStudents) { %>
 				
 					<tr>
 						<td> <%=tempStudent.getNombre()%> </td>
-						<td> <%= tempStudent.getapellido() %> </td>
-						<td> <%= tempStudent.getcorreo() %> </td>
+						<td> <%= tempStudent.getApellido() %> </td>
+						<td> <%= tempStudent.getCorreo() %> </td>
+						<td> <%= tempStudent.getDireccion() %> </td>
 					</tr>
 				
 				<% } %>

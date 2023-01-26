@@ -34,7 +34,9 @@
 					<th>Nombre</th>
 					<th>Apellido</th>
 					<th>Correo</th>
-					<th>Action</th>
+					<th>Direccion</th>
+					<th>Telefono</th>
+					<th>Opciones</th>
 				</tr>
 				
 				<c:forEach var="tempStudent" items="${STUDENT_LIST}">
@@ -55,6 +57,8 @@
 						<td> ${tempStudent.nombre} </td>
 						<td> ${tempStudent.apellido} </td>
 						<td> ${tempStudent.correo} </td>
+						<td> ${tempStudent.direccion} </td>
+						<td> ${tempStudent.telefono} </td>
 						<td> 
 							<a href="${tempLink}">Actualizar</a> 
 							 | 
@@ -75,11 +79,3 @@
 
 
 </html>
-
-
-
-
-
-
-
-

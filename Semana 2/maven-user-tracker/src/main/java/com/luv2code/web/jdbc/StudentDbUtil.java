@@ -45,9 +45,11 @@ public class StudentDbUtil {
 				String nombre = myRs.getString("nombre");
 				String apellido = myRs.getString("apellido");
 				String correo = myRs.getString("correo");
+				String direccion = myRs.getString("direccion");
+				String telefono = myRs.getString("telefono");
 				
 				// create new student object
-				Student tempStudent = new Student(id, nombre, apellido, correo);
+				Student tempStudent = new Student(id, nombre, apellido, correo, direccion, telefono);
 				
 				// add it to the list of students
 				students.add(tempStudent);				
@@ -92,15 +94,16 @@ public class StudentDbUtil {
 			
 			// create sql for insert
 			String sql = "insert into student "
-					   + "(nombre, apellido, correo) "
-					   + "values (?, ?, ?)";
-			
+					   + "(nombre, apellido, correo, direccion, telefono) "
+					   + "values (?, ?, ?, ?, ?)";
 			myStmt = myConn.prepareStatement(sql);
 			
 			// set the param values for the student
 			myStmt.setString(1, theStudent.getNombre());
-			myStmt.setString(2, theStudent.getapellido());
-			myStmt.setString(3, theStudent.getcorreo());
+			myStmt.setString(2, theStudent.getApellido());
+			myStmt.setString(3, theStudent.getCorreo());
+			myStmt.setString(4, theStudent.getDireccion());
+			myStmt.setString(5, theStudent.getTelefono());
 			
 			// execute sql insert
 			myStmt.execute();
@@ -144,9 +147,11 @@ public class StudentDbUtil {
 				String nombre = myRs.getString("nombre");
 				String apellido = myRs.getString("apellido");
 				String correo = myRs.getString("correo");
+				String direccion = myRs.getString("direccion");
+				String telefono = myRs.getString("telefono");
 				
 				// use the studentId during construction
-				theStudent = new Student(studentId, nombre, apellido, correo);
+				theStudent = new Student(studentId, nombre, apellido, correo, direccion, telefono);
 			}
 			else {
 				throw new Exception("Could not find student id: " + studentId);
@@ -171,7 +176,7 @@ public class StudentDbUtil {
 			
 			// create SQL update statement
 			String sql = "update student "
-						+ "set nombre=?, apellido=?, correo=? "
+						+ "set nombre=?, apellido=?, correo=?, direccion=?, telefono=? "
 						+ "where id=?";
 			
 			// prepare statement
@@ -179,9 +184,11 @@ public class StudentDbUtil {
 			
 			// set params
 			myStmt.setString(1, theStudent.getNombre());
-			myStmt.setString(2, theStudent.getapellido());
-			myStmt.setString(3, theStudent.getcorreo());
-			myStmt.setInt(4, theStudent.getId());
+			myStmt.setString(2, theStudent.getApellido());
+			myStmt.setString(3, theStudent.getCorreo());
+			myStmt.setString(4, theStudent.getDireccion());
+			myStmt.setString(5, theStudent.getTelefono());
+			myStmt.setInt(6, theStudent.getId());
 			
 			// execute SQL statement
 			myStmt.execute();

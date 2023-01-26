@@ -6,6 +6,7 @@
 
 	<link type="text/css" rel="stylesheet" href="css/style.css">
 	<link type="text/css" rel="stylesheet" href="css/add-student-style.css">	
+	<meta charset="UTF-8">
 </head>
 
 <body>
@@ -40,8 +41,18 @@
 					</tr>
 					
 					<tr>
+						<td><label>Dirección:</label></td>
+						<td><input type="text" name="direccion" /></td>
+					</tr>
+					
+					<tr>
+						<td><label>Telefono:</label></td>
+						<td><input type="text" name="telefono" /></td>
+					</tr>
+					
+					<tr>
 						<td><label></label></td>
-						<td><input type="submit" value="Save" class="save" /></td>
+						<td><input type="submit" value="Guardar" class="save" /></td>
 					</tr>
 					
 				</tbody>
