@@ -5,7 +5,7 @@
 	<title>Agregar usuario</title>
 
 	<link type="text/css" rel="stylesheet" href="css/style.css">
-	<link type="text/css" rel="stylesheet" href="css/add-student-style.css">	
+	<link type="text/css" rel="stylesheet" href="css/add-user-style.css">	
 	<meta charset="UTF-8">
 </head>
 
@@ -19,7 +19,7 @@
 	<div id="container">
 		<h3>Agregar usuario</h3>
 		
-		<form action="StudentControllerServlet" method="GET">
+		<form action="UserControllerServlet" method="GET">
 		
 			<input type="hidden" name="command" value="ADD" />
 			
@@ -62,7 +62,7 @@
 		<div style="clear: both;"></div>
 		
 		<p>
-			<a href="StudentControllerServlet">Volver a la lista</a>
+			<a href="UserControllerServlet">Volver a la lista</a>
 		</p>
 	</div>
 </body>

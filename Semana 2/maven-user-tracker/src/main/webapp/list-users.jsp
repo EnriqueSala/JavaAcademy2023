@@ -21,11 +21,11 @@
 	
 		<div id="content">
 		
-			<!-- put new button: Add Student -->
+			<!-- put new button: Add User -->
 			
 			<input type="button" value="Agregar usuario" 
-				   onclick="window.location.href='add-student-form.jsp'; return false;"
-				   class="add-student-button"
+				   onclick="window.location.href='add-user-form.jsp'; return false;"
+				   class="add-user-button"
 			/>
 			
 			<table>
@@ -39,26 +39,26 @@
 					<th>Opciones</th>
 				</tr>
 				
-				<c:forEach var="tempStudent" items="${STUDENT_LIST}">
+				<c:forEach var="tempUser" items="${USER_LIST}">
 					
-					<!-- set up a link for each student -->
-					<c:url var="tempLink" value="StudentControllerServlet">
+					<!-- set up a link for each user -->
+					<c:url var="tempLink" value="UserControllerServlet">
 						<c:param name="command" value="LOAD" />
-						<c:param name="studentId" value="${tempStudent.id}" />
+						<c:param name="userId" value="${tempUser.id}" />
 					</c:url>
 
-					<!--  set up a link to delete a student -->
-					<c:url var="deleteLink" value="StudentControllerServlet">
+					<!--  set up a link to delete a user -->
+					<c:url var="deleteLink" value="UserControllerServlet">
 						<c:param name="command" value="DELETE" />
-						<c:param name="studentId" value="${tempStudent.id}" />
+						<c:param name="userId" value="${tempUser.id}" />
 					</c:url>
 																		
 					<tr>
-						<td> ${tempStudent.nombre} </td>
-						<td> ${tempStudent.apellido} </td>
-						<td> ${tempStudent.correo} </td>
-						<td> ${tempStudent.direccion} </td>
-						<td> ${tempStudent.telefono} </td>
+						<td> ${tempUser.nombre} </td>
+						<td> ${tempUser.apellido} </td>
+						<td> ${tempUser.correo} </td>
+						<td> ${tempUser.direccion} </td>
+						<td> ${tempUser.telefono} </td>
 						<td> 
 							<a href="${tempLink}">Actualizar</a> 
 							 | 

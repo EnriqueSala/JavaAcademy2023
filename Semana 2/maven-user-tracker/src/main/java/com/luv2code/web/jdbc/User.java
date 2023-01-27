@@ -1,6 +1,6 @@
 package com.luv2code.web.jdbc;
 
-public class Student {
+public class User {
 
 	private int id;
 	private String nombre;
@@ -10,7 +10,7 @@ public class Student {
 	private String telefono;
 
 
-	public Student(int id, String nombre, String apellido, String correo, String direccion, String telefono) {
+	public User(int id, String nombre, String apellido, String correo, String direccion, String telefono) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -21,7 +21,7 @@ public class Student {
 	}
 
 
-	public Student(String nombre, String apellido, String correo, String direccion, String telefono) {
+	public User(String nombre, String apellido, String correo, String direccion, String telefono) {
 		super();
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -32,7 +32,7 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo
+		return "User [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo
 				+ ", direccion=" + direccion + ", telefono=" + telefono + "]";
 	}
 
