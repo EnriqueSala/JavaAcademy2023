@@ -41,9 +41,9 @@
 					<th>Nombre</th>
 					<th>Apellido</th>
 					<th>Correo</th>
-					<th>Correo</th>
 					<th>Direccion</th>
 					<th>Telefono</th>
+					<th>Opcion</th>
 				</tr>
 				
 				<!-- loop over and print our users -->
