@@ -11,14 +11,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.curso.crudUser.entity.User;
 import com.curso.crudUser.service.UserService;
 
-@CrossOrigin
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
 public class UserController {
 	
 	private UserService userService;
@@ -32,7 +33,6 @@ public class UserController {
 	public List<User> findAll(){
 		return userService.findAll();
 	}
-	@CrossOrigin
 	@GetMapping("/users/{userId}")
 	public User findById(@PathVariable int userId) {
 		User user = userService.findById(userId);
